@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Print Mini Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .demo-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-left: 5px solid #007BFF;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML "Print" Methods</h1>
+
+    <!-- Method 1: Standard HTML Tags -->
+    <div class="demo-box">
+        <h3>1. Direct HTML Print</h3>
+        <p>Hello World! This text is printed using standard HTML tags.</p>
+    </div>
+
+    <!-- Method 2: JavaScript DOM Manipulation -->
+    <div class="demo-box">
+        <h3>2. JavaScript innerHTML Print</h3>
+        <p id="js-output"></p>
+    </div>
+
+    <!-- Method 3: Window Print Trigger -->
+    <div class="demo-box">
+        <h3>3. Physical Printer Trigger</h3>
+        <p>Click the button below to open your browser's print menu.</p>
+        <button onclick="window.print()">Print This Page</button>
+    </div>
+
+    <script>
+        // Execution for Method 2
+        // This finds the element by its ID and inserts text into it.
+        document.getElementById("js-output").innerHTML = "Hello World! This text was printed via JavaScript.";
+    </script>
+
+</body>
+</html>
